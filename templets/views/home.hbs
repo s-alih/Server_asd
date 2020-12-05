@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+           var departure = document.getElementById('dep').selectedOptions[0].value;
+           var destination = document.getElementById('des').selectedOptions[0].value;
+           const message = document.querySelector('#info')
+           const massage2 = document.querySelector('#flight')
+             if (departure == 'Chennai'){
+                
+                message.textContent = 'Flight is not Available in this date try another date'
+             }else if(departure == 'Kochin'){
+                message.textContent = 'Quater express    4:30pm '
+                massage2.textContent = 'Virgin Athlantic     9:50pm '
+             }else if (departure == 'calicut'){
+                 message.textContent = 'Air India express    8:30pm '
+                massage2.textContent = 'Emirates Athlantic     11:50pm '
+             }
+        }
+    </script>
+</head>
+<body>
+    <h1>Onji Airlines</h1>
+    <h2>Welcome {{name}} <br></h2>
+    <p>Book Now</p>
+    <form >
+    <label for="departure">Departure:</label>
+    <select name="departure" id="dep">
+        <option value="Chennai">Chennai</option>
+        <option value="Kochin">Kochin</option>
+        <option value="Calicut">Calicut</option>
+        <option value="Trivandram">Trivandram</option>
+    </select><br>
+    <label for="destination">Destination:</label>
+    <select name="destination" id="des">
+        <option value="Miami">Miami</option>
+        <option value="Dubai">Dubai</option>
+        <option value="London">London</option>
+        <option value="Pattaya">Pattaya</option>
+    </select><br>
+    <label for="date">Date of Departure</label>
+    <input type="date" id="date" name="date"><br>
+    <input type = "button" onclick = "check()" value = "Check Available flight">
+    <p id="info"></p> 
+    <p id="flight"></p>
+    </form>
+    
+</body>
+</html>

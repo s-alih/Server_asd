@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+        div {
+        height: 554px;
+        width: 100%;
+    
+        background-color: powderblue;
+        }
+        button{
+            background-color:white;
+            border: none;
+        }
+    </style>
+    <script>
+        function book1(){
+            const flight = '{{first}}'
+            const destination = '{{destination}}'
+            const departure = '{{departure}}'
+            const time = '12/2/2020'
+            const price = '234'
+            window.location.href = `/booked?flight=${flight}&destination=${destination}&departure=${departure}&date=${time}&price=${price}`
+        }
+        function book2(){
+            
+            const flight = '{{second}}'
+            const destination = '{{destination}}'
+            const departure = '{{departure}}'
+            const time = '12/2/2020'
+            const price = '310'
+            window.location.href = `/booked?flight=${flight}&destination=${destination}&departure=${departure}&date=${time}&price=${price}`
+
+        }
+    </script>
+</head>
+<body>
+    <div style="background-image: url('https://s7d2.scene7.com/is/image/honeywell/s_414384259_Business-Jet_2880x1440');">
+    <h2> {{departure}}  to  {{destination}}</h2>
+    
+    <p>Avialble flights</p>
+    
+    <p>{{first}}  price:234$  11:34pm </p> <button onclick="book1()">Book Now</button><br>
+    <p>{{second}} price:310$  12:45pm</p> <button onclick="book2()" >Book now</button>
+    </div>
+    </body>
+</html>

@@ -12,11 +12,5 @@ document.querySelector('form').addEventListener('submit',(e)=>{
         const mobilenumber = document.getElementById('mbno').value
         message1.textContent = 'good you are loged in '
         window.location.href = `/home?name=${name}&password=${password}&mobile=${mobilenumber}`
-    }
-
-    
-    
-    
-    
-    
+    }   
 })

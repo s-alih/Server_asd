@@ -23,7 +23,7 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicPath))
 
 app.get('', (req,res) => {
-    res.render('home')
+    res.render('index')
 })
 app.get('/home',async (req,res) =>{
     const name = req.query.name
